@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.studentSystem.dao.AssociateDao">
+
+<select id="findById" resultType="com.studentSystem.model.Associate">
+    select * from associate where id = #{id}
+</select>
+    <insert id="insertOne">
+        insert into associate(id,username,email_address,password,create_time,recommend_word,img_url,recommend,user_id) values(#{arg0},#{arg1},#{arg2},#{arg3},#{arg4},#{arg5},#{arg6},#{arg7},#{arg8})
+    </insert>
+    <select id="findUnsubscribed" resultType="com.studentSystem.model.AssociateView">
+        select a.id as associate_id,a.username as associate_name,a.recommend,a.recommend_word,u.username,a.email_address as email from associate as a,user as u where a.user_id=u.id and state =0
+    </select>
+    <update id="updateState">
+        update associate set state = 1 where id = #{id}
+    </update>
+    <delete id="deleteOne">
+        delete from associate where id = #{id}
+    </delete>
+    <select id="findSubscribed" resultType="com.studentSystem.model.AssociateView">
+      select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url from associate as a where state =1
+    </select>
+
+    <insert id="insertApplicant" parameterType="com.studentSystem.model.Applicant">
+        insert into apply(apply_id,user_id,associate_id,user_introduce,user_reason,state,time_stamp) values (#{apply_id},#{user_id},#{associate_id},#{user_introduce},#{user_reason},#{state},#{time_stamp})
+    </insert>
+    <select id="findMyApplyById" resultType="com.studentSystem.model.ApplicantMessage">
+        select associate.username as associate_name,apply.time_stamp,apply.state from apply,associate where apply.associate_id = associate.id and apply.user_id = #{id}
+    </select>
+    <select id="findMyAssociateById" resultType="com.studentSystem.model.ApplicantMessage">
+        select username as associate_name,create_time,state from associate where associate.user_id = #{id}
+    </select>
+    <select id="findAssociateByEmail" resultType="com.studentSystem.model.Associate">
+        select id,username,email_address,password,create_time,person_count,recommend_word,img_url,activity,state,user_id,role from associate where email_address = #{email_address}
+    </select>
+    <select id="findApplyMessage" resultType="com.studentSystem.model.AssociateMessage">
+        select apply_id,user.username as username,time_stamp,user_introduce,user_reason from associate,apply,user where  associate.id = apply.associate_id and apply.user_id = user.id and associate.id = #{id} and apply.state=0
+    </select>
+    <update id="updateApplyWithY">
+        update apply set state=1 where apply_id = #{id}
+    </update>
+    <update id="updateApplyWithN">
+        update apply set state=-1 where apply_id= #{id}
+    </update>
+</mapper>

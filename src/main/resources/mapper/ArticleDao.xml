@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.studentSystem.dao.ArticleDao">
+
+    <select id="findAll" resultType="com.studentSystem.model.Article">
+        select title_id,user_id,username,time_stamp,like_count,reply_count,article_name,img_url,recommend from article order by time_stamp desc
+    </select>
+    <select id="findArticleById" parameterType="long" resultType="com.studentSystem.model.Article">
+        select * from article where title_id = #{id}
+    </select>
+    <insert id="insertOne" parameterType="com.studentSystem.model.Article">
+        insert  into article(title_id,user_id,username,time_stamp,article_name,article_content,img_url,recommend) values (#{title_id},#{user_id},#{username},#{time_stamp},#{article_name},#{article_content},#{img_url},#{recommend})
+    </insert>
+</mapper>
