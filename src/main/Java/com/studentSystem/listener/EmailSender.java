@@ -91,4 +91,42 @@ public class EmailSender {
 			e.printStackTrace();
 		}
 	}
+
+	public void sendEmail(String email, String letter) {
+		try{
+			Properties props = new Properties();
+			// 开启debug调试
+			props.setProperty("mail.debug", "true");
+			// 发送服务器需要身份验证
+			props.setProperty("mail.smtp.auth", "true");
+			// 设置邮件服务器主机名
+			props.setProperty("mail.host", "smtp.163.com");
+			// 发送邮件协议名称
+			props.setProperty("mail.transport.protocol", "smtp");
+
+			props.setProperty("mail.smtp.port","25");
+
+			Session session = Session.getDefaultInstance(props);
+			Message msg = new MimeMessage(session);
+
+
+			msg.setFrom(new InternetAddress("wangchaofan2018@163.com"));
+			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
+			msg.setSubject("欢迎邮箱");
+			msg.setContent(letter,"text/html;charset=UTF-8");
+			msg.saveChanges();
+			Transport transport = session.getTransport();
+			transport.connect("smtp.163.com","wangchaofan2018@163.com","wy2019sqmwcf");
+			transport.sendMessage(msg,msg.getAllRecipients());
+			transport.close();
+
+
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (NoSuchProviderException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
+	}
 }

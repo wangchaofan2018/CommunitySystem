@@ -53,6 +53,7 @@
                 <li class=""><a href="#">社区中心</a></li>
                 <li class=""><a href="/associate/manager.do">管理者中心</a></li>
                 <li class=""><a href="/associate/my_apply.do?user_id=${user.id}">我的申请</a></li>
+                <li class=""><a href="/associate/my_bill.action?user_id=${user.id}">缴费清单</a></li>
                 <li class=""><c:if test="${user.role eq 'associate'}"><a href="/associate/article_create_page.do">文章发布</a></c:if></li>
                 <!-- <li class="">
                     

@@ -33,4 +33,14 @@ public interface AssociateDao {
 	void updateApplyWithN(long apply_id);
 
 	List<AssociateScoreView> findScore(long user_id);
+
+	long findUserIdByApplyId(long apply_id);
+
+	void insertMember(long id, long user_id, long associate_id);
+
+	List<MemberView> findMemberList(long user_id);
+
+	void updateMemberState(long member_id);
+
+	EmailMessage findAssociateByMemberId(long member_id);
 }

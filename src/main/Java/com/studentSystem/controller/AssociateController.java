@@ -136,7 +136,9 @@ public class AssociateController {
 		Associate associate = (Associate)request.getSession().getAttribute("user");
 		ModelAndView mv = new ModelAndView();
 		if(flag){
+			long user_id = associateService.findUserIdByApplyId(apply_id);
 			associateService.updateApplyWithY(apply_id);
+			associateService.insertMember(user_id,associate.getId());
 		}else {
 			associateService.updateApplyWithN(apply_id);
 		}
@@ -149,6 +151,14 @@ public class AssociateController {
 	@RequestMapping("article_create_page.do")
 	public String getArticlePage(){
 		return "article_create";
+	}
+	@RequestMapping("my_bill")
+	public ModelAndView getBillPage(long user_id){
+		ModelAndView mv = new ModelAndView();
+		List<MemberView> list = associateService.findMemberList(user_id);
+		mv.addObject("list",list);
+		mv.setViewName("my_bill");
+		return mv;
 	}
 
 }

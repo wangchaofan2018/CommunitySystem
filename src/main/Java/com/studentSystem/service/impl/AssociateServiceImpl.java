@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.studentSystem.dao.AssociateDao;
 import com.studentSystem.model.*;
 import com.studentSystem.service.AssociateService;
+import com.studentSystem.utils.UUID;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
@@ -119,6 +120,33 @@ public class AssociateServiceImpl implements AssociateService {
 	@Override
 	public List<AssociateScoreView> findScoreById(long user_id) {
 		return associateDao.findScore(user_id);
+	}
+
+	@Override
+	public long findUserIdByApplyId(long apply_id) {
+		return associateDao.findUserIdByApplyId(apply_id);
+	}
+
+	@Override
+	public void insertMember(long user_id, long associate_id) {
+		long id = UUID.getId();
+		associateDao.insertMember(id,user_id,associate_id);
+
+	}
+
+	@Override
+	public List<MemberView> findMemberList(long user_id) {
+		return associateDao.findMemberList(user_id);
+	}
+
+	@Override
+	public void updateMemberState(long member_id) {
+		associateDao.updateMemberState(member_id);
+	}
+
+	@Override
+	public EmailMessage findAssociateByMemberId(long member_id) {
+		return associateDao.findAssociateByMemberId(member_id);
 	}
 
 }

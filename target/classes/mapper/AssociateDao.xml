@@ -47,4 +47,19 @@
     <select id="findScore" resultType="com.studentSystem.model.AssociateScoreView">
         select associate.username,associate.score from apply,associate where associate.id = apply.associate_id and apply.state = 1 and apply.user_id=#{id}
     </select>
+    <select id="findUserIdByApplyId" resultType="long">
+        select user_id from apply where apply_id=#{id}
+    </select>
+    <insert id="insertMember">
+        insert into member(id,user_id,associate_id) values (#{arg0},#{arg1},#{arg2})
+    </insert>
+    <select id="findMemberList" resultType="com.studentSystem.model.MemberView">
+        select member.id as member_id,associate.username as associate_name,associate.cost,member.state from member,associate where member.user_id = #{id} and member.associate_id=associate.id
+    </select>
+    <update id="updateMemberState" parameterType="long">
+         update member set state = 1 where member.id = #{id}
+    </update>
+    <select id="findAssociateByMemberId" resultType="com.studentSystem.model.EmailMessage">
+        select u.username,u.email,associate.username as associate_name from member,user as u,associate where member.user_id=u.id and member.associate_id=associate.id and member.id=#{id}
+    </select>
 </mapper>

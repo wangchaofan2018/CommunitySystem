@@ -15,6 +15,7 @@ public class Associate {
 	private int state;
 	private String role;
 	private int score;
+	private int cost;
 
 	public long getId() {
 		return id;
@@ -143,5 +144,13 @@ public class Associate {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
 	}
 }

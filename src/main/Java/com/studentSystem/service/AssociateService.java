@@ -32,4 +32,14 @@ public interface AssociateService {
 	void updateApplyWithN(long apply_id);
 
 	List<AssociateScoreView> findScoreById(long user_id);
+
+	long findUserIdByApplyId(long apply_id);
+
+	void insertMember(long user_id, long associate_id);
+
+	List<MemberView> findMemberList(long user_id);
+
+	void updateMemberState(long member_id);
+
+	EmailMessage findAssociateByMemberId(long member_id);
 }

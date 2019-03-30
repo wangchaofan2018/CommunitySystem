@@ -34,4 +34,18 @@ public class ProducerService {
 			}
 		});
 	}
+	public void produce1(final String associate, final String email, final String username){
+		jmsTemplate.send(destination,new MessageCreator() {
+
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				Map<String,String> map = new HashMap<>();
+				map.put("email",email);
+				map.put("username",username);
+				map.put("associate",associate);
+				String jsonString = JSON.toJSONString(map);
+				return session.createTextMessage(jsonString);
+			}
+		});
+	}
 }
