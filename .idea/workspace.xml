@@ -7,17 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c19791de-f4c3-4b65-9e25-92b8299e2771" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateScoreView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_apply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_apply.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/fonts/et-line.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/et-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,7 +71,7 @@
           <entry key="jpg" value="6" />
           <entry key="js" value="4" />
           <entry key="jsp" value="70" />
-          <entry key="properties" value="18" />
+          <entry key="properties" value="19" />
           <entry key="svg" value="2" />
           <entry key="tld" value="2" />
           <entry key="xml" value="77" />
@@ -95,7 +85,7 @@
           <entry key="JAVA" value="186" />
           <entry key="JSP" value="70" />
           <entry key="JavaScript" value="4" />
-          <entry key="Properties" value="18" />
+          <entry key="Properties" value="19" />
           <entry key="SVG" value="2" />
           <entry key="XML" value="80" />
         </counts>
@@ -107,7 +97,7 @@
           <entry key="java" value="16848" />
           <entry key="js" value="102" />
           <entry key="jsp" value="5258" />
-          <entry key="properties" value="204" />
+          <entry key="properties" value="216" />
           <entry key="txt" value="11" />
           <entry key="xml" value="3434" />
         </counts>
@@ -120,7 +110,7 @@
           <entry key="JSP" value="5255" />
           <entry key="JavaScript" value="102" />
           <entry key="PLAIN_TEXT" value="35" />
-          <entry key="Properties" value="204" />
+          <entry key="Properties" value="216" />
           <entry key="SQL" value="12" />
           <entry key="XML" value="3422" />
         </counts>
@@ -144,11 +134,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
+            <state relative-caret-position="15">
+              <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -254,7 +253,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssoicateView.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_login.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/activemq.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
@@ -305,6 +303,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_apply.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -550,7 +549,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553751437114" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553916259498" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -857,7 +856,7 @@
       <workItem from="1553681367972" duration="912000" />
       <workItem from="1553694187888" duration="599000" />
       <workItem from="1553747943150" duration="3670000" />
-      <workItem from="1553912890173" duration="638000" />
+      <workItem from="1553912890173" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交">
       <created>1553657648768</created>
@@ -902,7 +901,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323941000" />
+    <option name="totallyTimeSpent" value="325579000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,8 +914,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874055" visible="true" weight="0.28677464" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874055" visible="true" weight="0.28677464" />
       <window_info id="Structure" order="1" sideWeight="0.50125945" side_tool="true" weight="0.23414305" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -933,7 +933,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32796487" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32796487" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5033738" side_tool="true" weight="0.41874084" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32796487" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.32850242" />
@@ -1199,9 +1199,6 @@
         <state relative-caret-position="-216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
@@ -1314,8 +1311,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
+        <state relative-caret-position="15">
+          <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
