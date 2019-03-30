@@ -116,4 +116,9 @@ public class AssociateServiceImpl implements AssociateService {
 		associateDao.updateApplyWithN(apply_id);
 	}
 
+	@Override
+	public List<AssociateScoreView> findScoreById(long user_id) {
+		return associateDao.findScore(user_id);
+	}
+
 }

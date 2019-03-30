@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.studentSystem.dao.CommentDao">
+
+    <select id="findCommentById" parameterType="long" resultType="com.studentSystem.model.Comment">
+        select u.img_url as user_img_url,u.username as user_name,c.comment_id,a.title_id as article_id,c.reply_id,c.comment_content,c.comment_time from user as u,article as a,comment as c where u.id = c.user_id and a.title_id = c.article_id and a.title_id=#{id}
+    </select>
+    <insert id="insertOne" >
+        insert into comment(comment_id,user_id,article_id,reply_id,comment_content,comment_time) values (#{arg0},#{arg1},#{arg2},#{arg3},#{arg4},#{arg5})
+    </insert>
+    
+</mapper>

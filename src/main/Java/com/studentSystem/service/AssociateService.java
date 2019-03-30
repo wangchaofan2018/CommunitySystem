@@ -30,4 +30,6 @@ public interface AssociateService {
 	void updateApplyWithY(long apply_id);
 
 	void updateApplyWithN(long apply_id);
+
+	List<AssociateScoreView> findScoreById(long user_id);
 }

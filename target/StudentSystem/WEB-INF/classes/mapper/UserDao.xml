@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.studentSystem.dao.UserDao">
+
+    <select id="selectUser" resultType="User" parameterType="long">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+    <insert id="insertUser" parameterType="com.studentSystem.model.User">
+        INSERT into user(id,username,email,password,status,role,regTime,regIp) values (#{id},#{username},#{email},#{password},#{status},#{role},#{regTime},#{regIp})
+    </insert>
+    <select id="searchUser" resultType="User" parameterType="String">
+        SELECT * FROM user where username = #{username}
+    </select>
+    <update id="updateUser" parameterType="String">
+        UPDATE user set password = #{arg1} where email = #{arg0}
+    </update>
+    <update id="updateUserMessage">
+        UPDATE user set img_url = #{arg1},sex = #{arg2},age = #{arg3},phone_number=#{arg4},address=#{arg5},sign=#{arg6},student_number=#{arg7} where email=#{arg0}
+    </update>
+    <select id="findAdmin"  resultType="String">
+        select password from admin where username = #{id}
+    </select>
+    <update id="updateUserById">
+        update user set status = 1 where id = #{id}
+    </update>
+</mapper>

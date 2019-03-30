@@ -31,4 +31,6 @@ public interface AssociateDao {
 	void updateApplyWithY(long apply_id);
 
 	void updateApplyWithN(long apply_id);
+
+	List<AssociateScoreView> findScore(long user_id);
 }

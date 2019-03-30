@@ -18,6 +18,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("associate")
@@ -121,8 +122,12 @@ public class AssociateController {
 		ModelAndView mv = new ModelAndView();
 		List<ApplicantMessage> list1 = associateService.findMyApplyById(user_id);
 		List<ApplicantMessage> list2 = associateService.findMyAssociateById(user_id);
+		List<AssociateScoreView> list3 = associateService.findScoreById(user_id);
+		int total_score = list3.stream().collect(Collectors.summingInt(m->m.getScore()));
 		mv.addObject("list1",list1);
 		mv.addObject("list2",list2);
+		mv.addObject("list3",list3);
+		mv.addObject("total_score",total_score);
 		mv.setViewName("my_apply");
 		return mv;
 	}
