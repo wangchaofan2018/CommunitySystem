@@ -19,7 +19,7 @@
 
 <style type="text/css">
     body{
-        background: url("<%=request.getContextPath()%>/img/background_pic/1.jpg");
+        background: url("<%=request.getContextPath()%>/img/background_pic/3.jpg");
 
     }
 

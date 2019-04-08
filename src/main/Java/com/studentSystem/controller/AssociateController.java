@@ -3,6 +3,7 @@ package com.studentSystem.controller;
 import com.studentSystem.model.*;
 import com.studentSystem.service.AssociateService;
 import com.studentSystem.utils.GetNowTime;
+import com.studentSystem.utils.TimeToStamp;
 import com.studentSystem.utils.UUID;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -160,5 +162,50 @@ public class AssociateController {
 		mv.setViewName("my_bill");
 		return mv;
 	}
+	@RequestMapping("active.do")
+	public ModelAndView getAssociateActivity(long user_id){
+		ModelAndView mv = new ModelAndView();
+		List<ActivityView> activity = associateService.findActivityByUserId(user_id);
+		List<ActivityView> activitied = associateService.findActivityInJoins(user_id);
+		Set<Long> set = activitied.stream().map(s->s.getActivity_id()).collect(Collectors.toSet());
+//		Set<Long> set = associateService.findAllSetInJoins(user_id);
+		activity=activity.stream().filter(s->!set.contains(s.getActivity_id())).collect(Collectors.toList());
+
+		mv.addObject("list",activity);
+		mv.addObject("list2",activitied);
+		mv.setViewName("active_list");
+		return mv;
+	}
+	@RequestMapping("join_activity.do")
+	public ModelAndView joinActivity(long activity_id,long user_id){
+		ModelAndView mv = new ModelAndView();
+		associateService.insertJoins(UUID.getId(),activity_id,user_id);
+		associateService.updateActivityJoinsNumber(activity_id);
+		List<ActivityView> activity = associateService.findActivityByUserId(user_id);
+		List<ActivityView> activitied = associateService.findActivityInJoins(user_id);
+		Set<Long> set = activitied.stream().map(s->s.getActivity_id()).collect(Collectors.toSet());
+		activity=activity.stream().filter(s->!set.contains(s.getActivity_id())).collect(Collectors.toList());
+		mv.addObject("list",activity);
+		mv.addObject("list2",activitied);
+		mv.setViewName("active_list");
+		return mv;
+	}
+	@RequestMapping("activity_create_page.do")
+	public String getActivityPage(){
+		return "activity_create";
+	}
+	@RequestMapping("activity_create.do")
+	public ModelAndView getCheckAssociate(long associate_id,String activity_name,String activity_time,String activity_content){
+		ModelAndView mv = new ModelAndView();
+		List<AssociateMessage> list = associateService.findApplyMessage(associate_id);
+		mv.addObject("list",list);
+		mv.setViewName("associate_manager");
+		activity_time = activity_time+":00";
+		long time_stamp = TimeToStamp.getStampByStringTime(activity_time);
+		long id = UUID.getId();
+		associateService.insertActivity(id,associate_id,time_stamp,activity_name,activity_content);
+		return mv;
+	}
+
 
 }

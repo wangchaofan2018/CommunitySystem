@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.studentSystem.dao.AssociateDao;
 import com.studentSystem.model.*;
 import com.studentSystem.service.AssociateService;
+import com.studentSystem.utils.GetNowTime;
 import com.studentSystem.utils.UUID;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
@@ -17,6 +18,8 @@ import javax.jms.Session;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service("associateService")
 public class AssociateServiceImpl implements AssociateService {
@@ -147,6 +150,38 @@ public class AssociateServiceImpl implements AssociateService {
 	@Override
 	public EmailMessage findAssociateByMemberId(long member_id) {
 		return associateDao.findAssociateByMemberId(member_id);
+	}
+
+	@Override
+	public List<ActivityView> findActivityByUserId(long user_id) {
+		List<ActivityView> list = associateDao.findActivityByUserId(user_id);
+		List<ActivityView> nowlist = list.stream().filter(s->s.getActivity_time()> GetNowTime.getTimeStamp()).collect(Collectors.toList());
+		return nowlist;
+	}
+
+	@Override
+	public Set<Long> findAllSetInJoins(long user_id) {
+		return associateDao.findAllJoins(user_id);
+	}
+
+	@Override
+	public List<ActivityView> findActivityInJoins(long user_id) {
+		return associateDao.findActivityInJoins(user_id);
+	}
+
+	@Override
+	public void insertJoins(long id, long activity_id, long user_id) {
+		associateDao.insertJoins(id,activity_id,user_id);
+	}
+
+	@Override
+	public void insertActivity(long id, long associate_id, long time_stamp, String activity_name, String activity_content) {
+		associateDao.insertActivity(id,associate_id,time_stamp,activity_name,activity_content);
+	}
+
+	@Override
+	public void updateActivityJoinsNumber(long activity_id) {
+		associateDao.updateActivityJoinsNumber(activity_id);
 	}
 
 }

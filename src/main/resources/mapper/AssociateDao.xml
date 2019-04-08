@@ -62,4 +62,22 @@
     <select id="findAssociateByMemberId" resultType="com.studentSystem.model.EmailMessage">
         select u.username,u.email,associate.username as associate_name from member,user as u,associate where member.user_id=u.id and member.associate_id=associate.id and member.id=#{id}
     </select>
+    <select id="findActivityByUserId" resultType="com.studentSystem.model.ActivityView">
+        select a.id as activity_id,associate.username as associate_name,a.activity_time,a.activity_name,a.activity_content from activity as a,member as m,associate where m.user_id = #{user_id} and m.state=1 and m.associate_id=a.associate_id and m.associate_id=associate.id
+    </select>
+    <select id="findAllJoins" resultType="long">
+        select activity_id from joins where user_id = #{id}
+    </select>
+    <select id="findActivityInJoins" resultType="com.studentSystem.model.ActivityView">
+        select activity.id as activity_id,associate.username as associate_name,activity.activity_time,activity.activity_name,activity.activity_content from joins,activity,associate WHERE joins.user_id = 2490532821 and joins.activity_id=activity.id and activity.associate_id = associate.id
+    </select>
+    <select id="insertJoins">
+        insert into joins(id,user_id,activity_id) values (#{arg0},#{arg2},#{arg1})
+    </select>
+    <select id="insertActivity">
+        insert into activity(id,associate_id,activity_time,activity_name,activity_content) values (#{arg0},#{arg1},#{arg2},#{arg3},#{arg4})
+    </select>
+    <update id="updateActivityJoinsNumber">
+        update activity set counts = counts+1 where id = #{id}
+    </update>
 </mapper>

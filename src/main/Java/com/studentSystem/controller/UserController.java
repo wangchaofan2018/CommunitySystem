@@ -72,7 +72,7 @@ public class UserController {
 //		ConfirmEmail let = new ConfirmEmail();
 //		let.send(email,"dd");
     }
-	@RequestMapping("checkUser.do")
+	@RequestMapping("/checkUser.do")
     public ModelAndView checkUser(String username,String password,HttpServletRequest request){
 		User user = null;
 		user = this.userService.searchUserByName(username);
@@ -92,11 +92,11 @@ public class UserController {
 		}
 		return mv;
 	}
-	@RequestMapping("inform.do")
+	@RequestMapping("/inform.do")
 	public String userInform(){
     	return "inform";
 	}
-	@RequestMapping("passwordUpdate.do")
+	@RequestMapping("/passwordUpdate.do")
 	public void userUpdatePassword(String email,String password,HttpServletRequest request,HttpServletResponse response){
 		System.out.println(email);
 		System.out.println(password);
@@ -109,7 +109,7 @@ public class UserController {
 			System.out.println("重定向异常");
 		}
 	}
-	@RequestMapping("userMessageUpdate.do")
+	@RequestMapping("/userMessageUpdate.do")
 	public String userUpdateMessage(String email, MultipartFile image, String radio1, String age, String phone_number, String address, String sign,String student_number,HttpServletRequest request){
 
 		String localPath = "C:\\Users\\NOTEBOOK\\IdeaProjects\\StudentSystem\\src\\main\\webapp\\img\\person\\";
@@ -139,17 +139,17 @@ public class UserController {
 		return "login";
 
 	}
-	@RequestMapping("login.do")
+	@RequestMapping("/login.do")
 	public String loginPage(){
     	return "login";
 	}
-	@RequestMapping("home.do")
+	@RequestMapping("/home.do")
 	public String returnHome(Model model){
 		ArrayList list = articleService.findAll();
 		model.addAttribute("list",list);
     	return "home";
 	}
-	@RequestMapping("logout.do")
+	@RequestMapping("/logout.do")
 	public String logoutPage(HttpServletRequest request){
 		HttpSession session = request.getSession();
 		session.removeAttribute("user");
@@ -159,12 +159,12 @@ public class UserController {
 
 
 
-	@RequestMapping("admin_login_page.do")
+	@RequestMapping("/admin_login_page.do")
 	public String admin_login_page(){
     	return "admin_login";
 	}
 
-	@RequestMapping("checkAdmin.do")
+	@RequestMapping("/checkAdmin.do")
 	public ModelAndView admin_check(String username,String password,HttpServletRequest request){
     	ModelAndView mv = new ModelAndView();
 		Admin admin = new Admin();
@@ -183,17 +183,17 @@ public class UserController {
 		return mv;
 	}
 
-	@RequestMapping("active.do")
+	@RequestMapping("/active.do")
 	public String userActive(String code){
     	long id = Long.parseLong(code);
     	userService.updateUserById(id);
     	return "is_actived";
 	}
-	@RequestMapping("associate_login_page.do")
+	@RequestMapping("/associate_login_page.do")
 	public String associateLoginPage(){
     	return "associate_login";
 	}
-	@RequestMapping("checkAssociate")
+	@RequestMapping("/checkAssociate.do")
 	public ModelAndView checkAssociate(String email_address,String password,HttpServletRequest request){
     	ModelAndView mv = new ModelAndView();
     	Associate associate = associateService.findAssociateByEmail(email_address);

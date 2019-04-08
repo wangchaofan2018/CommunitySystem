@@ -3,6 +3,7 @@ package com.studentSystem.service;
 import com.studentSystem.model.*;
 
 import java.util.List;
+import java.util.Set;
 
 public interface AssociateService {
 	Associate findAssociateById(long id);
@@ -42,4 +43,16 @@ public interface AssociateService {
 	void updateMemberState(long member_id);
 
 	EmailMessage findAssociateByMemberId(long member_id);
+
+	List<ActivityView> findActivityByUserId(long user_id);
+
+	Set<Long> findAllSetInJoins(long user_id);
+
+	List<ActivityView> findActivityInJoins(long user_id);
+
+	void insertJoins(long id, long activity_id, long user_id);
+
+	void insertActivity(long id, long associate_id, long time_stamp, String activity_name, String activity_content);
+
+	void updateActivityJoinsNumber(long activity_id);
 }

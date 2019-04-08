@@ -47,14 +47,15 @@
         <div class="navbar-text ">
             <ul class="nav navbar-nav navbar-left  ">
 
-                <li class="active "><a href="/user/home.do">首页</a></li>
-                <li class=""><a href="/associate/recommend.do" >社团介绍</a></li>
-                <li class=""><a href="#">课程计划</a></li>
-                <li class=""><a href="#">社区中心</a></li>
-                <li class=""><a href="/associate/manager.do">管理者中心</a></li>
-                <li class=""><a href="/associate/my_apply.do?user_id=${user.id}">我的申请</a></li>
-                <li class=""><a href="/associate/my_bill.action?user_id=${user.id}">缴费清单</a></li>
+                <c:if test="${user.role eq 'normal'}"><li class="active "><a href="/user/home.do">首页</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/recommend.do" >社团介绍</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/active.do?user_id=${user.id}">社团活动</a></li></c:if>
+                <li class=""><a href="#">社联公告</a></li>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/manager.do">管理者中心</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/my_apply.do?user_id=${user.id}">我的申请</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/my_bill.action?user_id=${user.id}">缴费清单</a></li></c:if>
                 <li class=""><c:if test="${user.role eq 'associate'}"><a href="/associate/article_create_page.do">文章发布</a></c:if></li>
+                <li class=""><c:if test="${user.role eq 'associate'}"><a href="/associate/activity_create_page.do">活动发布</a></c:if></li>
                 <!-- <li class="">
                     
                     <form class="navbar-form " action="#"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="search" /></div>
