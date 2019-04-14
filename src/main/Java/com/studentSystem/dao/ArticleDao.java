@@ -11,4 +11,8 @@ public interface ArticleDao {
 	Article findArticleById(long id);
 
 	void insertOne(Article article);
+
+	ArrayList<Article> findByPage(int cur, int pageSize);
+
+	int findTotalCounts();
 }

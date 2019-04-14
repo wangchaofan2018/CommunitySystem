@@ -64,12 +64,12 @@
                             <div class="form-group file-control-upload">
                                 <input class="form-control-file" type="file" multiple="multiple" name="image" data-validation="length mime size" data-validation-length="min2" data-validation-allowing="jpg, png, gif" data-validation-max-size="512kb" data-validation-error-msg-size="You can not upload images larger than 512kb" data-validation-error-msg-mime="You can only upload images" data-validation-error-msg-length="You have to upload at least two images">
                             </div>
-                                <div class="col-xs-4">
-                                <label>用户学号</label>
-                                <div class="form-group">
-                                    <input class="form-control" data-validation="sign" type="text" name="student_number" placeholder=" would you want say">
-                                </div>
-                                </div>
+                                <%--<div class="col-xs-4">--%>
+                                <%--<label>用户学号</label>--%>
+                                <%--<div class="form-group">--%>
+                                    <%--<input class="form-control" data-validation="sign" type="text" name="student_number" placeholder=" would you want say">--%>
+                                <%--</div>--%>
+                                <%--</div>--%>
                             <div class="col-xs-4">
                             <label>用户性别</label>
                             <div class="form-group ">

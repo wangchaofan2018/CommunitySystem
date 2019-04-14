@@ -52,8 +52,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUserMessageByEmail(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign,String student_number) {
-        userDao.updateUserMessage(email,img_url,sex,age,phone_number,address,sign,student_number);
+    public void updateUserMessageByEmail(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign) {
+        userDao.updateUserMessage(email,img_url,sex,age,phone_number,address,sign);
     }
 
     @Override
@@ -68,5 +68,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUserById(long id) {
         userDao.updateUserById(id);
+    }
+
+    @Override
+    public User searchUserByStudentNumber(String student_number) {
+        return userDao.searchUserBySno(student_number);
     }
 }

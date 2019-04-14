@@ -91,14 +91,14 @@
                         </div>
                         <div class="modal-body">
                             <form class="" action="/user/checkUser.do" >
-                                <label>UserName</label>
+                                <label>学号</label>
                                 <div class="form-group">
                                     <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input class="form-control" type="text" name="username" placeholder="Email Address" />
+                                    <input class="form-control" type="text" name="student_number" placeholder="" />
                                     </div>
                                 </div>
-                                <label>PassWord</label>
+                                <label>密码</label>
                                 <div class="form-group">
                                     <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -133,6 +133,7 @@
             </div>
             <div class="modal-body">
                 <form id="reg_form" action="/user/register.do" method="post">
+                    <label>姓名</label>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -140,7 +141,7 @@
                         </div>
                     </div>
                     
-                    <label>Email</label>
+                    <label>邮箱</label>
                     <div class="form-group">
                         <div class="form-group">
                                 <div class="input-group">
@@ -149,7 +150,16 @@
                                 </div>
                         </div>
                     </div>
-                    <label>Password</label>
+                    <label>学号</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input class="form-control"  value="" name="student_number" placeholder="Student Number">
+                            </div>
+                        </div>
+                    </div>
+                    <label>密码</label>
                     <div class="form-group">
                         <div class="form-group">
                                 <div class="input-group">
@@ -158,7 +168,7 @@
                                 </div>
                             </div>
                     </div>
-                    <label>Confirm Password</label>
+                    <label>确认密码</label>
                     <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>

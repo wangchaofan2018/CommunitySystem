@@ -9,9 +9,11 @@ public interface UserService {
 
     public void updateUserByEmail(String email, String password);
 
-    public void updateUserMessageByEmail(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign,String student_number);
+    public void updateUserMessageByEmail(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign);
 
 	boolean checkAdmin(String username, String password);
 
     void updateUserById(long id);
+
+	User searchUserByStudentNumber(String student_number);
 }

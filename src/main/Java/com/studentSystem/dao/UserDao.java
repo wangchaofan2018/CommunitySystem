@@ -11,9 +11,11 @@ public interface UserDao {
 
 	public void updateUser(String email, String password);
 
-	public void updateUserMessage(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign,String student_number);
+	public void updateUserMessage(String email, String img_url, boolean sex, String age, String phone_number, String address, String sign);
 
 	String findAdmin(String username);
 
 	void updateUserById(long id);
+
+	User searchUserBySno(String student_number);
 }

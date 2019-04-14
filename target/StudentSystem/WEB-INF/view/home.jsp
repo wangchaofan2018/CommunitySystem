@@ -72,7 +72,7 @@
 <div class="container">
 
 
-<c:forEach items="${list}" var="article" >
+<c:forEach items="${articlePage.list}" var="article" >
                     <div class="col-lg-12">
                         <div class="blogs">
                             <div class="img-holder">
@@ -99,13 +99,16 @@
 <h5 class="page-header"></h5>
 <nav style="text-align: center">
     <ul class="pagination">
-    <li><a href="#">&laquo;</a></li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">&raquo;</a></li>
+    <li><c:if test="${articlePage.curPage-1>0}"><a href="/user/home.do?p=${articlePage.curPage-1}">&laquo;</a></c:if></li>
+        <c:forEach begin="${articlePage.curPage-3>0?articlePage.curPage-3:1}" end="${articlePage.curPage+2<articlePage.totalPage?articlePage.curPage+2:articlePage.totalPage}" step="1" var="x">
+    <li>
+        <c:if test="${articlePage.curPage eq x}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2">${x}</i></a></c:if>
+        <c:if test="${articlePage.curPage ne x}"><a href="/user/home.do?p=${x}">${x}</a></c:if>
+    </li>
+        </c:forEach>
+    <li>
+        <c:if test="${articlePage.curPage+1<=articlePage.totalPage}"><a href="/user/home.do?p=${articlePage.curPage+1}">&raquo;</a></c:if>
+    </li>
 
 </ul>
 </nav>

@@ -8,7 +8,7 @@
         SELECT * FROM user WHERE id = #{id}
     </select>
     <insert id="insertUser" parameterType="com.studentSystem.model.User">
-        INSERT into user(id,username,email,password,status,role,regTime,regIp) values (#{id},#{username},#{email},#{password},#{status},#{role},#{regTime},#{regIp})
+        INSERT into user(id,username,email,password,status,role,regTime,regIp,student_number) values (#{id},#{username},#{email},#{password},#{status},#{role},#{regTime},#{regIp},#{student_number})
     </insert>
     <select id="searchUser" resultType="User" parameterType="String">
         SELECT * FROM user where username = #{username}
@@ -17,7 +17,7 @@
         UPDATE user set password = #{arg1} where email = #{arg0}
     </update>
     <update id="updateUserMessage">
-        UPDATE user set img_url = #{arg1},sex = #{arg2},age = #{arg3},phone_number=#{arg4},address=#{arg5},sign=#{arg6},student_number=#{arg7} where email=#{arg0}
+        UPDATE user set img_url = #{arg1},sex = #{arg2},age = #{arg3},phone_number=#{arg4},address=#{arg5},sign=#{arg6} where email=#{arg0}
     </update>
     <select id="findAdmin"  resultType="String">
         select password from admin where username = #{id}
@@ -25,4 +25,7 @@
     <update id="updateUserById">
         update user set status = 1 where id = #{id}
     </update>
+    <select id="searchUserBySno" resultType="com.studentSystem.model.User">
+        select * from user where student_number = #{student_number}
+    </select>
 </mapper>

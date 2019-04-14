@@ -46,7 +46,7 @@ public class UserController {
         response.getWriter().close();
     }
     @RequestMapping("/register.do")
-    public String insertUser(String username,String address,String password,HttpServletRequest request, HttpServletResponse response){
+    public String insertUser(String username,String address,String student_number,String password,HttpServletRequest request, HttpServletResponse response){
 
 		String email = address;
 		String role = "normal";
@@ -63,6 +63,7 @@ public class UserController {
 		user.setRegTime(regTime);
 		user.setStatus(status);
 		user.setRole(role);
+		user.setStudent_number(student_number);
 		System.out.println(user);
 		String local_url = request.getContextPath();
 		String url = local_url+"/user/active.do?code="+user.getId();
@@ -73,21 +74,23 @@ public class UserController {
 //		let.send(email,"dd");
     }
 	@RequestMapping("/checkUser.do")
-    public ModelAndView checkUser(String username,String password,HttpServletRequest request){
+    public ModelAndView checkUser(String student_number,String password,HttpServletRequest request){
 		User user = null;
-		user = this.userService.searchUserByName(username);
+//		user = this.userService.searchUserByName(username);
+		user = this.userService.searchUserByStudentNumber(student_number);
 		ModelAndView mv = new ModelAndView();
-		ArrayList list = articleService.findAll();
+//		ArrayList list = articleService.findAll();
+		ArticlePage articlePage = articleService.findByPage(1);
 		if(user==null){
 			mv.setViewName("login");
-			mv.addObject("Error","用户名不存在");
+			mv.addObject("Error","学号不存在");
 		}else if(!user.getPassword().equals(password)){
 			mv.setViewName("login");
 			mv.addObject("Error","密码错误");
 		}else{
 			request.getSession().setAttribute("user",user);
-			request.setAttribute("list",list);
-
+//			request.setAttribute("list",list);
+			request.setAttribute("articlePage",articlePage);
 			mv.setViewName("home");
 		}
 		return mv;
@@ -110,7 +113,7 @@ public class UserController {
 		}
 	}
 	@RequestMapping("/userMessageUpdate.do")
-	public String userUpdateMessage(String email, MultipartFile image, String radio1, String age, String phone_number, String address, String sign,String student_number,HttpServletRequest request){
+	public String userUpdateMessage(String email, MultipartFile image, String radio1, String age, String phone_number, String address, String sign,HttpServletRequest request){
 
 		String localPath = "C:\\Users\\NOTEBOOK\\IdeaProjects\\StudentSystem\\src\\main\\webapp\\img\\person\\";
 		String filename = null;
@@ -133,7 +136,7 @@ public class UserController {
 		if (radio1.equals("0")){
 			sex=true;//true为男 false为女
 		}
-		userService.updateUserMessageByEmail(email,img_url,sex,age,phone_number,address,sign,student_number);
+		userService.updateUserMessageByEmail(email,img_url,sex,age,phone_number,address,sign);
 		System.out.println("用户信息已更新");
 		request.getSession().removeAttribute("user");
 		return "login";
@@ -144,9 +147,10 @@ public class UserController {
     	return "login";
 	}
 	@RequestMapping("/home.do")
-	public String returnHome(Model model){
-		ArrayList list = articleService.findAll();
-		model.addAttribute("list",list);
+	public String returnHome(Model model,int p){
+//		ArrayList list = articleService.findAll();
+		ArticlePage articlePage = articleService.findByPage(p);
+		model.addAttribute("articlePage",articlePage);
     	return "home";
 	}
 	@RequestMapping("/logout.do")
@@ -197,8 +201,12 @@ public class UserController {
 	public ModelAndView checkAssociate(String email_address,String password,HttpServletRequest request){
     	ModelAndView mv = new ModelAndView();
     	Associate associate = associateService.findAssociateByEmail(email_address);
-    	String dbpassword = associate.getPassword();
-    	if(password.equals(dbpassword)){
+		String dbpassword = null;
+		if(associate!=null){
+			dbpassword = associate.getPassword();
+		}
+    	if(dbpassword!=null&&password.equals(dbpassword)){
+
     		request.getSession().setAttribute("user",associate);
     		List<AssociateMessage> list = associateService.findApplyMessage(associate.getId());
     		mv.addObject("list",list);
@@ -208,6 +216,10 @@ public class UserController {
     		mv.setViewName("associate_login");
 		}
 		return mv;
+	}
+	@RequestMapping("register_page.do")
+	public String getSignUpPage(){
+    	return "register";
 	}
 
 }

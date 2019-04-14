@@ -13,4 +13,10 @@
     <insert id="insertOne" parameterType="com.studentSystem.model.Article">
         insert  into article(title_id,user_id,username,time_stamp,article_name,article_content,img_url,recommend) values (#{title_id},#{user_id},#{username},#{time_stamp},#{article_name},#{article_content},#{img_url},#{recommend})
     </insert>
+    <select id="findByPage" resultType="com.studentSystem.model.Article">
+        select * from article order by time_stamp desc limit #{arg0},#{arg1}
+    </select>
+    <select id="findTotalCounts" resultType="int">
+        select count(title_id) from article
+    </select>
 </mapper>

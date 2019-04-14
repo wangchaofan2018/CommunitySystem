@@ -14,7 +14,8 @@ public class LoginIntercepter implements HandlerInterceptor {
 		HttpSession session = httpServletRequest.getSession();
 		if(session.getAttribute("user")!=null)
 			return true;
-		else if (httpServletRequest.getRequestURI().indexOf("/user/login.do")!=-1||httpServletRequest.getRequestURI().indexOf("/user/checkUser.do")!=-1){
+		else if (httpServletRequest.getRequestURI().indexOf("/user/login.do")!=-1||httpServletRequest.getRequestURI().indexOf("/user/register.do")!=-1||httpServletRequest.getRequestURI().indexOf("/user/register_page.do")!=-1||httpServletRequest.getRequestURI().indexOf("/user/checkUser.do")!=-1){
+			System.out.println("pass");
 			return true;
 		}
 		else{

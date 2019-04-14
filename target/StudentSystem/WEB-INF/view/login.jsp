@@ -37,21 +37,23 @@
     <div class="form row">
         <div class="form-horizontal col-md-offset-3" id="login_form">
             <form action="/user/checkUser.do" method="post">
-            <h3 class="form-title">LOGIN</h3>
+            <h3 class="form-title">登陆</h3>
             <div class="col-md-9">
+                <label>学号</label>
                 <div class="form-group">
                     <i class="fa fa-user fa-lg"></i>
-                    <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                    <input class="form-control required" type="text" placeholder="Username" id="username" name="student_number" autofocus="autofocus" maxlength="20"/>
                 </div>
+                <label>密码</label>
                 <div class="form-group">
                     <i class="fa fa-lock fa-lg"></i>
                     <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="20"/>${Error}
                 </div>
                 <div class="form-group">
-                    <label class="checkbox">
-                        <input type="checkbox" name="remember" value="1"/>
-                    </label>
-                </div>
+                <label class="checkbox">
+                    <input type="checkbox" name="remember" value="1"/>记住账号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/user/register_page.do">注册</a>
+                </label>
+            </div>
                 <div class="form-group col-md-offset-9">
                     <button type="submit" class="btn btn-success pull-right" name="submit">登录</button>
                 </div>
