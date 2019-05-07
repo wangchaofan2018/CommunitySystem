@@ -56,4 +56,8 @@ public interface AssociateDao {
 	void insertActivity(long id, long associate_id, long time_stamp, String activity_name, String activity_content);
 
 	void updateActivityJoinsNumber(long activity_id);
+
+	List<AssociateView> findSubscribedByPage(int i, int pageSize);
+
+	int findTotalCounts();
 }

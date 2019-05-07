@@ -47,8 +47,8 @@
         <div class="navbar-text ">
             <ul class="nav navbar-nav navbar-left  ">
 
-                <c:if test="${user.role eq 'normal'}"><li class="active "><a href="/user/home.do">首页</a></li></c:if>
-                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/recommend.do" >社团介绍</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class="active "><a href="/user/home.do?p=1">首页</a></li></c:if>
+                <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/recommend.do?p=1" >社团介绍</a></li></c:if>
                 <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/active.do?user_id=${user.id}">社团活动</a></li></c:if>
                 <li class=""><a href="#">社联公告</a></li>
                 <c:if test="${user.role eq 'normal'}"><li class=""><a href="/associate/manager.do">管理者中心</a></li></c:if>

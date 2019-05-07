@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="job-filter-result">
-                                <c:forEach items="${list}" var="item">
+                                <c:forEach items="${associateViewPage.list}" var="item">
                                     <a href="/associate/introduce.do?id=${item.associate_id}">
                                 <div class="job-list">
                                     <div class="thumb">
@@ -98,12 +98,20 @@
                             <div class="pagination-list text-center">
                                 <nav class="navigation pagination">
                                     <div class="nav-links">
-                                        <a class="prev page-numbers" href="#"><i class="fas fa-angle-left"></i></a>
-                                        <a class="page-numbers" href="#">1</a>
-                                        <span aria-current="page" class="page-numbers current">2</span>
-                                        <a class="page-numbers" href="#">3</a>
-                                        <a class="page-numbers" href="#">4</a>
-                                        <a class="next page-numbers" href="#"><i class="fas fa-angle-right"></i></a>
+                                        <c:if test="${associateViewPage.curPage-1<=0}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2"><i class="fas fa-angle-left"></i></i></a></c:if>
+                                        <c:if test="${associateViewPage.curPage-1>0}"><a class="prev page-numbers" href="/associate/recommend.do?p=${associateViewPage.curPage-1}"><i class="fas fa-angle-left"></i></a></c:if>
+                                        <c:forEach begin="${associateViewPage.curPage-3>0?associateViewPage.curPage-3:1}" end="${associateViewPage.curPage+2<=associateViewPage.totalPage?associateViewPage.curPage+2:associateViewPage.totalPage}" step="1" var="x">
+                                        <c:if test="${x eq associateViewPage.curPage}">
+                                            <span aria-current="page" class="page-numbers current">${x}</span>
+                                        </c:if>
+                                        <c:if test="${x ne associateViewPage.curPage}">
+                                            <a class="page-numbers" href="/associate/recommend.do?p=${x}">${x}</a>
+                                        </c:if>
+
+                                        </c:forEach>
+
+                                        <c:if test="${associateViewPage.curPage+1>associateViewPage.totalPage}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2"><i class="fas fa-angle-right"></i></i></a></c:if>
+                                        <c:if test="${associateViewPage.curPage+1<=associateViewPage.totalPage}"><a class="next page-numbers" href="/associate/recommend.do?p=${associateViewPage.curPage+1}"><i class="fas fa-angle-right"></i></a></c:if>
                                     </div>
                                 </nav>
                             </div>

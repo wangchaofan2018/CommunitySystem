@@ -94,10 +94,13 @@ public class AssociateController {
 		return mv;
 	}
 	@RequestMapping("recommend.do")
-	public String recommend(Model model){
-		List<AssociateView> list = associateService.findSubscribedAssociate();
-		model.addAttribute("list",list);
-		model.addAttribute("length",list.size());
+	public String recommend(Model model,int p){
+//		List<AssociateView> list = associateService.findSubscribedAssociate();
+		AssociateViewPage associateViewPage = associateService.findAssociateViewByPage(p);
+//		model.addAttribute("list",list);
+		System.out.println(associateViewPage.getList());
+		model.addAttribute("associateViewPage",associateViewPage);
+		model.addAttribute("length",associateViewPage.getTotalCount());
 		return "recommend";
 	}
 	@RequestMapping("apply.do")
@@ -114,9 +117,9 @@ public class AssociateController {
 		applicant.setState(state);
 		applicant.setTime_stamp(time_stamp);
 		associateService.insertApplyMessage(applicant);
-		List<AssociateView> list = associateService.findSubscribedAssociate();
-		model.addAttribute("list",list);
-		model.addAttribute("length",list.size());
+		AssociateViewPage associateViewPage = associateService.findAssociateViewByPage(1);
+		model.addAttribute("associateViewPage",associateViewPage);
+		model.addAttribute("length",associateViewPage.getList().size());
 		return "recommend";
 	}
 	@RequestMapping("my_apply.do")
@@ -167,6 +170,7 @@ public class AssociateController {
 		ModelAndView mv = new ModelAndView();
 		List<ActivityView> activity = associateService.findActivityByUserId(user_id);
 		List<ActivityView> activitied = associateService.findActivityInJoins(user_id);
+
 		Set<Long> set = activitied.stream().map(s->s.getActivity_id()).collect(Collectors.toSet());
 //		Set<Long> set = associateService.findAllSetInJoins(user_id);
 		activity=activity.stream().filter(s->!set.contains(s.getActivity_id())).collect(Collectors.toList());

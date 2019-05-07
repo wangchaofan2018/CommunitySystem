@@ -29,12 +29,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-        function register() {
-            alert("一封激活邮件已发送至你的邮箱，请于24小时内确认！")
-            document.getElementById("reg_form").submit;
-        }
-    </script>
+   
 </head>
 
 <body>
@@ -142,11 +137,12 @@
                     </div>
                     
                     <label>邮箱</label>
-                    <div class="form-group">
+                    <div class="form-group" id="tage">
                         <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input class="form-control" type="email" value="" name="address" placeholder="Enter Email">
+                                    <input class="form-control" id="email" type="email"  name="address" placeholder="Enter Email" >
+                                    <%--<span class="glyphicon glyphicon-remove" style="color: #ac2925;display: none;" id="obj" ></span>--%>
                                 </div>
                         </div>
                     </div>
@@ -160,19 +156,19 @@
                         </div>
                     </div>
                     <label>密码</label>
-                    <div class="form-group">
+                    <div class="form-group" id="p1">
                         <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <input class="form-control" type="password"  value="" placeholder="Enter Password">
+                                    <input class="form-control" type="password" id="checkpass" value="" placeholder="Enter Password">
                                 </div>
                             </div>
                     </div>
                     <label>确认密码</label>
-                    <div class="form-group">
+                    <div class="form-group" id="p2">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <input class="form-control" type="password" name="password" value="" placeholder="Enter Confirm Password">
+                                    <input class="form-control" id="repass" type="password" name="password" value="" placeholder="Enter Confirm Password">
                                 </div>
                             </div>
 
@@ -214,5 +210,70 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ <script type="text/javascript">
+        function register() {
+            alert("一封激活邮件已发送至你的邮箱，请于24小时内确认！")
+            document.getElementById("reg_form").submit;
+        }
+        var ipt =document.getElementById('email')
+         var obj =document.getElementById('obj')
+        var tage = document.getElementById('tage')
+        var pass = document.getElementById("checkpass")
+        var repass = document.getElementById("repass")
+        ipt.onblur=function reg() {
+            var str1 =ipt.value
+            var reg1 = new RegExp("^[a-z0-9A-Z]+[- | a-z0-9A-Z . _]+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-z]{2,}$");
+            if(reg1.test(str1)){
+
+                // obj.className ='glyphicon glyphicon-ok'
+                tage.className = 'form-group has-success'
+            }else {
+                tage.className = 'form-group has-error'
+            }
+        }
+        pass.onblur=function regpass(){
+            var str = pass.value
+            var p1 = document.getElementById("p1")
+            if(CheckPassWord(str)){
+
+                p1.className='form-group has-success'
+            }else {
+                p1.className='form-group has-error'
+                // alert('必须为字母加数字且长度不小于8位')
+                pass.placeholder='必须为字母加数字且长度不小于8位'
+            }
+        }
+        repass.onblur=function regpass1(){
+            var str1 = pass.value
+            var str2 = repass.value
+            var p2 = document.getElementById("p2")
+            if(str1==str2){
+                p2.className='form-group has-success'
+            }else {
+                p2.className='form-group has-error'
+                alert('两次密码输入不匹配 请重新输入')
+                pass.value=''
+                repass.value=''
+                p1.className='form-group has-error'
+                pass.focus()
+            }
+        }
+        function CheckPassWord(password) {//必须为字母加数字且长度不小于8位
+            var str = password;
+            if (str == null || str.length <8) {
+                return false;
+            }
+            var reg1 = new RegExp(/^[0-9A-Za-z]+$/);
+            if (!reg1.test(str)) {
+                return false;
+            }
+            var reg = new RegExp(/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/);
+            if (reg.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

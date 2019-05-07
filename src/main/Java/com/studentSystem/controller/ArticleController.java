@@ -31,9 +31,7 @@ public class ArticleController {
 		Article article = articleService.findArticleById(title_id);
 		List<Comment> comment = commentService.findCommentById(title_id);
 		System.out.println(comment);
-//		String content = article.getArticle_content();
-//		content = StringUtil.getStringAddP(content);
-//		article.setArticle_content(content);
+
 		mv.addObject("comment_list",comment);
 		mv.addObject("article",article);
 		mv.setViewName("article_page");

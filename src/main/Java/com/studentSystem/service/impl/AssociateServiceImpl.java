@@ -184,4 +184,15 @@ public class AssociateServiceImpl implements AssociateService {
 		associateDao.updateActivityJoinsNumber(activity_id);
 	}
 
+	@Override
+	public AssociateViewPage findAssociateViewByPage(int p) {
+		AssociateViewPage associateViewPage = new AssociateViewPage();
+		associateViewPage.setCurPage(p);
+		List<AssociateView> list = associateDao.findSubscribedByPage((p-1)*associateViewPage.getPageSize(),associateViewPage.getPageSize());
+		associateViewPage.setList(list);
+		int totalCounts = associateDao.findTotalCounts();
+		associateViewPage.setTotalCount(totalCounts);
+		return associateViewPage;
+	}
+
 }

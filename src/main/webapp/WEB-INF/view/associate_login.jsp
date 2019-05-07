@@ -38,11 +38,11 @@
                 <div class="col-md-9">
                     <div class="form-group">
                         <i class="fa fa-user fa-lg"></i>
-                        <input class="form-control required" type="text" placeholder="Email Address"  name="email_address" autofocus="autofocus" maxlength="20"/>
+                        <input class="form-control required" type="text" placeholder="Email Address"  name="email_address" autofocus="autofocus" />
                     </div>
                     <div class="form-group">
                         <i class="fa fa-lock fa-lg"></i>
-                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="20"/>${Error}
+                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" />${Error}
                     </div>
                     <div class="form-group">
                         <label class="checkbox">

@@ -29,6 +29,11 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/responsive.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/font-awesome.css">
+    <script type="text/javascript">
+        function change(obj) {
+            document.getElementById("associate_id").value=obj;
+        }
+    </script>
 </head>
 <body>
     <jsp:include page="top_base.jsp"></jsp:include>
@@ -54,8 +59,8 @@
                   </div>
                 </div>
                 <div class="buttons">
-                  <a class="save" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Save Job</a>
-                  <a class="apply" href="#">在线申请</a>
+                  <a class="save" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>点赞</a>
+                  <a data-toggle="modal" href="#apply_form" class="apply" onclick="change(${associate.id})">在线申请</a>
                 </div>
               </div>
               <div class="details-information section-padding-60">
@@ -85,5 +90,38 @@
       </div>
     </div>
 <jsp:include page="foot_base.jsp"></jsp:include>
+        <div class="modal fade" id="apply_form" role="dialog" aria-hidden="true" tabindex="-1" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h5 class="modal-title" id="myModalLabel1">申请栏</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="" action="/associate/apply.do" >
+                            <input type="hidden" name="user_id" value="${user.id}">
+                            <input type="hidden" name="associate_id" value="" id="associate_id">
+                            <label>自我介绍:</label>
+
+                            <div class="form-group" style="margin-top: 14px">
+                                <div class="input-group">
+                                    <textarea name="user_introduce"  cols="70" rows="8"></textarea>
+                                </div>
+                            </div>
+                            <label>参加社团的原因:</label>
+                            <div class="form-group" style="margin-top: 14px">
+                                <div class="input-group">
+                                    <textarea name="user_reason"  cols="70" rows="8"></textarea>
+                                </div>
+                            </div>
+
+                            <div></div>
+                            <button class="button primary-bg btn-block" type="Submit">提交</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 </body>
 </html>

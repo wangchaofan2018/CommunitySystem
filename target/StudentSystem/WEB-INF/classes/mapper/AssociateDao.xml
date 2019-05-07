@@ -69,7 +69,7 @@
         select activity_id from joins where user_id = #{id}
     </select>
     <select id="findActivityInJoins" resultType="com.studentSystem.model.ActivityView">
-        select activity.id as activity_id,associate.username as associate_name,activity.activity_time,activity.activity_name,activity.activity_content from joins,activity,associate WHERE joins.user_id = 2490532821 and joins.activity_id=activity.id and activity.associate_id = associate.id
+        select activity.id as activity_id,associate.username as associate_name,activity.activity_time,activity.activity_name,activity.activity_content from joins,activity,associate WHERE joins.user_id = #{id} and joins.activity_id=activity.id and activity.associate_id = associate.id
     </select>
     <select id="insertJoins">
         insert into joins(id,user_id,activity_id) values (#{arg0},#{arg2},#{arg1})
@@ -80,4 +80,10 @@
     <update id="updateActivityJoinsNumber">
         update activity set counts = counts+1 where id = #{id}
     </update>
+    <select id="findSubscribedByPage" resultType="com.studentSystem.model.AssociateView">
+        select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url from associate as a where state =1 limit #{arg0},#{arg1}
+    </select>
+    <select id="findTotalCounts" resultType="int">
+        select count(associate.id) from associate where state=1
+    </select>
 </mapper>

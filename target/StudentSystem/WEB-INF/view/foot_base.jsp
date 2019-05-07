@@ -18,9 +18,9 @@
 					<div class="col-lg-12">
 						<div class="newsleter">
 							<div class="title2">
-								<h2 class="clr1 fz35">Subscribe Newsleter</h2>
+								<h2 class="clr1 fz35">Student association management system</h2>
 								<div class="clearfix"></div>
-								<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+								<p class="fz20"> Let's get the most out of you.</p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Email Address">
@@ -31,16 +31,11 @@
 					<div class="col-lg-12">
 						<div class="footer-nav">
 							<ul class="list-unstyled">
-								<li><a href="home.html">Home</a></li>
-								<li><a href="search_girls.html">Girls</a></li>
-								<li><a href="search_girls.html">Boys</a></li>
-								<li><a href="#">Online Users</a></li>
-								<li><a href="online_search_country.html">Countries</a></li>
-								<li><a href="search_by_map.html">All World</a></li>
-								<li><a href="online_search_result.html">Filter Profile</a></li>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#">Filter Profile</a></li>
 								<li><a href="#">Blog</a></li>
-								<li><a href="contact_us.html">About us</a></li>
-								<li><a href="contact_us.html">Contact Us</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -51,7 +46,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<center><p>2018 Design By <a href="http://www.17sucai.com/"> Rewebso </a> All Rights Reserved</p></center>
+						v<p>2019 Design By <a href="#"> WangChaoFan </a> All Rights Reserved</p>
 					</div>
 				</div>
 			</div>

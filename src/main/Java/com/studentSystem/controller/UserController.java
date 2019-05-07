@@ -76,10 +76,9 @@ public class UserController {
 	@RequestMapping("/checkUser.do")
     public ModelAndView checkUser(String student_number,String password,HttpServletRequest request){
 		User user = null;
-//		user = this.userService.searchUserByName(username);
+
 		user = this.userService.searchUserByStudentNumber(student_number);
 		ModelAndView mv = new ModelAndView();
-//		ArrayList list = articleService.findAll();
 		ArticlePage articlePage = articleService.findByPage(1);
 		if(user==null){
 			mv.setViewName("login");
@@ -89,7 +88,6 @@ public class UserController {
 			mv.addObject("Error","密码错误");
 		}else{
 			request.getSession().setAttribute("user",user);
-//			request.setAttribute("list",list);
 			request.setAttribute("articlePage",articlePage);
 			mv.setViewName("home");
 		}
@@ -148,7 +146,6 @@ public class UserController {
 	}
 	@RequestMapping("/home.do")
 	public String returnHome(Model model,int p){
-//		ArrayList list = articleService.findAll();
 		ArticlePage articlePage = articleService.findByPage(p);
 		model.addAttribute("articlePage",articlePage);
     	return "home";

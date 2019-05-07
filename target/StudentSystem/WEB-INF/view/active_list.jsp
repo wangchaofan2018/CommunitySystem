@@ -81,15 +81,20 @@
                     </div>
                     <div class="section-body">
                         <div class="list-group custom-content">
-                            <c:forEach items="${list}" var="item">
-                                <a class="list-group-item" id="${item.activity_id}" onmouseover="fun(${item.activity_id})" onmouseout="fun1(${item.activity_id})" href="/associate/join_activity.do?activity_id=${item.activity_id}&user_id=${user.id}">
-                                    <jsp:useBean id="dateValue1" class="java.util.Date"/>
-                                    <jsp:setProperty name="dateValue1" property="time" value="${item.activity_time}000"/>
-                                    <h4 class="list-group-item-heading">${item.associate_name}&nbsp:&nbsp${item.activity_name}</h4>
-                                    <h5>Time:<fmt:formatDate value="${dateValue1}" pattern="yyyy/MM/dd HH:mm"/></h5>
-                                    <p class="list-group-item-text">${item.activity_content}</p>
-                                </a>
-                            </c:forEach>
+                            <c:if test="${!empty list}">
+                                <c:forEach items="${list}" var="item">
+                                    <a class="list-group-item" id="${item.activity_id}" onmouseover="fun(${item.activity_id})" onmouseout="fun1(${item.activity_id})" href="/associate/join_activity.do?activity_id=${item.activity_id}&user_id=${user.id}">
+                                        <jsp:useBean id="dateValue1" class="java.util.Date"/>
+                                        <jsp:setProperty name="dateValue1" property="time" value="${item.activity_time}000"/>
+                                        <h4 class="list-group-item-heading">${item.associate_name}&nbsp:&nbsp${item.activity_name}</h4>
+                                        <h5>Time:<fmt:formatDate value="${dateValue1}" pattern="yyyy/MM/dd HH:mm"/></h5>
+                                        <p class="list-group-item-text">${item.activity_content}</p>
+                                    </a>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${empty list}">
+                                <span style="margin:0px 20px 0px 20px">这里空空如也</span>
+                            </c:if>
                             <%--<a class="list-group-item">--%>
                             <%--<h4 class="list-group-item-heading">List group item heading</h4>--%>
                             <%--<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>--%>
@@ -109,15 +114,20 @@
                     </div>
                     <div class="section-body">
                         <div class="list-group custom-content">
-                            <c:forEach items="${list2}" var="item">
-                                <a class="list-group-item"  href="#">
-                                    <jsp:useBean id="dateValue" class="java.util.Date"/>
-                                    <jsp:setProperty name="dateValue" property="time" value="${item.activity_time}000"/>
-                                    <h4 class="list-group-item-heading">${item.associate_name}&nbsp:&nbsp${item.activity_name}</h4>
-                                    <h5>Time:<fmt:formatDate value="${dateValue}" pattern="yyyy/MM/dd HH:mm"/></h5>
-                                    <p class="list-group-item-text">${item.activity_content}</p>
-                                </a>
-                            </c:forEach>
+                            <c:if test="${!empty list2}">
+                                <c:forEach items="${list2}" var="item">
+                                    <a class="list-group-item"  href="#">
+                                        <jsp:useBean id="dateValue" class="java.util.Date"/>
+                                        <jsp:setProperty name="dateValue" property="time" value="${item.activity_time}000"/>
+                                        <h4 class="list-group-item-heading">${item.associate_name}&nbsp:&nbsp${item.activity_name}</h4>
+                                        <h5>Time:<fmt:formatDate value="${dateValue}" pattern="yyyy/MM/dd HH:mm"/></h5>
+                                        <p class="list-group-item-text">${item.activity_content}</p>
+                                    </a>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${empty list2}">
+                                <span style="margin:0px 20px 0px 20px">这里空空如也</span>
+                            </c:if>
                             <%--<a class="list-group-item">--%>
                             <%--<h4 class="list-group-item-heading">List group item heading</h4>--%>
                             <%--<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>--%>

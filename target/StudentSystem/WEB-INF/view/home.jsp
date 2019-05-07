@@ -99,7 +99,9 @@
 <h5 class="page-header"></h5>
 <nav style="text-align: center">
     <ul class="pagination">
-    <li><c:if test="${articlePage.curPage-1>0}"><a href="/user/home.do?p=${articlePage.curPage-1}">&laquo;</a></c:if></li>
+    <li><c:if test="${articlePage.curPage-1>0}"><a href="/user/home.do?p=${articlePage.curPage-1}">&laquo;</a></c:if>
+        <c:if test="${articlePage.curPage-1<=0}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2">&laquo;</i></a></c:if>
+    </li>
         <c:forEach begin="${articlePage.curPage-3>0?articlePage.curPage-3:1}" end="${articlePage.curPage+2<articlePage.totalPage?articlePage.curPage+2:articlePage.totalPage}" step="1" var="x">
     <li>
         <c:if test="${articlePage.curPage eq x}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2">${x}</i></a></c:if>
@@ -108,6 +110,7 @@
         </c:forEach>
     <li>
         <c:if test="${articlePage.curPage+1<=articlePage.totalPage}"><a href="/user/home.do?p=${articlePage.curPage+1}">&raquo;</a></c:if>
+        <c:if test="${articlePage.curPage+1>articlePage.totalPage}"><a   href ="javascript:return false;" onclick="return false;" style="cursor: default;"><i class="edit" style="opacity: 0.2">&raquo;                             </i></a></c:if>
     </li>
 
 </ul>

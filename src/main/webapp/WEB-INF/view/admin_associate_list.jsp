@@ -39,6 +39,7 @@
                     <div class="section-header">
                         <h2>社团申请审核</h2>
                         <p>请判断社团申请是否合理并检查是否满足条件！</p>
+                        <a href="/user/login.do" class="col-lg-offset-4">返回普通用户登录页面</a>
                     </div>
                     <div class="section-body">
 
