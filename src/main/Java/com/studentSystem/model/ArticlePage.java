@@ -49,4 +49,14 @@ public class ArticlePage {
 	}
 
 
+	@Override
+	public String toString() {
+		return "ArticlePage{" +
+				"list=" + list +
+				", curPage=" + curPage +
+				", pageSize=" + pageSize +
+				", totalCount=" + totalCount +
+				", totalPage=" + totalPage +
+				'}';
+	}
 }

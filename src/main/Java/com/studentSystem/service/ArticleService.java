@@ -15,4 +15,6 @@ public interface ArticleService {
 	void insertOne(Article article);
 
 	ArticlePage findByPage(int i);
+
+	ArticlePage searchByTarget(String target,int p);
 }

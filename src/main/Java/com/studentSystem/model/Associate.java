@@ -17,6 +17,19 @@ public class Associate {
 	private int score;
 	private int cost;
 
+	public int getMax_person() {
+		return max_person;
+	}
+
+	public void setMax_person(int max_person) {
+		this.max_person = max_person;
+	}
+
+	private int max_person;
+
+
+
+
 	public long getId() {
 		return id;
 	}

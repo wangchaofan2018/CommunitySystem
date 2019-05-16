@@ -83,7 +83,7 @@
                         <div class="list-group custom-content">
                             <c:if test="${!empty list}">
                                 <c:forEach items="${list}" var="item">
-                                    <a class="list-group-item" id="${item.activity_id}" onmouseover="fun(${item.activity_id})" onmouseout="fun1(${item.activity_id})" href="/associate/join_activity.do?activity_id=${item.activity_id}&user_id=${user.id}">
+                                    <a class="list-group-item" id="${item.activity_id}" onmouseover="fun(${item.activity_id})" onmouseout="fun1(${item.activity_id})" href="/associate/join_activity.do?activity_id=${item.activity_id}&user_id=${user.id}&associate_id=${item.associate_id}">
                                         <jsp:useBean id="dateValue1" class="java.util.Date"/>
                                         <jsp:setProperty name="dateValue1" property="time" value="${item.activity_time}000"/>
                                         <h4 class="list-group-item-heading">${item.associate_name}&nbsp:&nbsp${item.activity_name}</h4>

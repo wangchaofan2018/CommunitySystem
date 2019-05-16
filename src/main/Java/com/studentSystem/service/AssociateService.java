@@ -57,4 +57,20 @@ public interface AssociateService {
 	void updateActivityJoinsNumber(long activity_id);
 
 	AssociateViewPage findAssociateViewByPage(int p);
+
+	void updateAssociateCount(String name);
+
+	int findStatusByUser(long user_id);
+
+	void updateUserStatus(long user_id);
+
+	List<MemberMessage> findAllMemberByAssociateId(long associate_id);
+
+	void deleteMember(long member_id);
+
+	List<MemberMessage> findNotBeDeleteMember(long associate_id);
+
+	void graduateMember(List<Long> str1);
+
+	void updateUserActivity(long user_id,long associate_id);
 }

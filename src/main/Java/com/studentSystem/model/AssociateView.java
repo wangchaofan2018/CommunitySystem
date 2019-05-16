@@ -8,6 +8,17 @@ public class AssociateView {
 	private String username;
 	private String email;
 	private String img_url;
+	private int person_count;
+
+	public int getMax_person() {
+		return max_person;
+	}
+
+	public void setMax_person(int max_person) {
+		this.max_person = max_person;
+	}
+
+	private int max_person;
 
 	public long getAssociate_id() {
 		return associate_id;
@@ -74,5 +85,13 @@ public class AssociateView {
 
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
+	}
+
+	public int getPerson_count() {
+		return person_count;
+	}
+
+	public void setPerson_count(int person_count) {
+		this.person_count = person_count;
 	}
 }

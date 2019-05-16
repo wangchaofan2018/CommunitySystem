@@ -60,4 +60,20 @@ public interface AssociateDao {
 	List<AssociateView> findSubscribedByPage(int i, int pageSize);
 
 	int findTotalCounts();
+
+	void updateAssociateCount(String name);
+
+	int findStatusByUser(long user_id);
+
+	void updateStatus(long user_id);
+
+	List<MemberMessage> findMemberByAssociateId(long associate_id);
+
+	void deleteMember(long member_id);
+
+	List<MemberMessage> findNotBeDeleteMember(long associate_id);
+
+	void updateGraduateMember(List<Long> str1);
+
+	void updateUserActivity(long user_id,long associate_id);
 }

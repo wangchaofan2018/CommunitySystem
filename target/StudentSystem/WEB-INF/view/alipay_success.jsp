@@ -17,7 +17,7 @@
 <jsp:include page="top_base.jsp"></jsp:include>
     <div class="container">
         <div class="offset-3">
-            <a href="/user/home.do">缴费成功，点此回到首页</a>
+            <a href="/user/home.do?p=1">缴费成功，点此回到首页</a>
         </div>
     </div>
 </body>

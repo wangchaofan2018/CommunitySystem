@@ -15,4 +15,8 @@ public interface ArticleDao {
 	ArrayList<Article> findByPage(int cur, int pageSize);
 
 	int findTotalCounts();
+
+	ArrayList<Article> search(int i, int pageSize, String target);
+
+	int searchCount(String target);
 }

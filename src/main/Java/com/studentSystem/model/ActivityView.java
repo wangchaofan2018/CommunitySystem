@@ -2,6 +2,7 @@ package com.studentSystem.model;
 
 public class ActivityView {
 	private long activity_id;
+	private long associate_id;
 	private String associate_name;
 	private long activity_time;
 	private String activity_name;
@@ -56,5 +57,13 @@ public class ActivityView {
 				", activity_name='" + activity_name + '\'' +
 				", activity_content='" + activity_content + '\'' +
 				'}';
+	}
+
+	public long getAssociate_id() {
+		return associate_id;
+	}
+
+	public void setAssociate_id(long associate_id) {
+		this.associate_id = associate_id;
 	}
 }

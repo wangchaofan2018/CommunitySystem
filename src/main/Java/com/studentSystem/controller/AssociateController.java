@@ -2,6 +2,7 @@ package com.studentSystem.controller;
 
 import com.studentSystem.model.*;
 import com.studentSystem.service.AssociateService;
+import com.studentSystem.service.UserService;
 import com.studentSystem.utils.GetNowTime;
 import com.studentSystem.utils.TimeToStamp;
 import com.studentSystem.utils.UUID;
@@ -27,6 +28,8 @@ import java.util.stream.Collectors;
 public class AssociateController {
 	@Resource
 	private AssociateService associateService;
+	@Resource
+	private UserService userService;
 	@RequestMapping("introduce.do")
 	public ModelAndView findAssociateById(long id){
 		ModelAndView mv = new ModelAndView();
@@ -104,7 +107,7 @@ public class AssociateController {
 		return "recommend";
 	}
 	@RequestMapping("apply.do")
-	public String apply(long user_id,long associate_id,String user_introduce,String user_reason,Model model){
+	public String apply(long user_id,long associate_id,String user_introduce,String user_reason,Model model,HttpServletRequest request){
 		int state = 0;
 		long apply_id = UUID.getId();
 		long time_stamp = GetNowTime.getTimeStamp();
@@ -117,6 +120,10 @@ public class AssociateController {
 		applicant.setState(state);
 		applicant.setTime_stamp(time_stamp);
 		associateService.insertApplyMessage(applicant);
+		associateService.updateUserStatus(user_id);
+		User user = userService.selectUser(user_id);
+		request.getSession().setAttribute("user",user);
+
 		AssociateViewPage associateViewPage = associateService.findAssociateViewByPage(1);
 		model.addAttribute("associateViewPage",associateViewPage);
 		model.addAttribute("length",associateViewPage.getList().size());
@@ -137,13 +144,14 @@ public class AssociateController {
 		return mv;
 	}
 	@RequestMapping("apply_is_agree.do")
-	public ModelAndView dealWithApply(boolean flag, long apply_id, HttpServletRequest request){
+	public ModelAndView dealWithApply(boolean flag, long apply_id,String associate_name, HttpServletRequest request){
 		Associate associate = (Associate)request.getSession().getAttribute("user");
 		ModelAndView mv = new ModelAndView();
 		if(flag){
 			long user_id = associateService.findUserIdByApplyId(apply_id);
 			associateService.updateApplyWithY(apply_id);
 			associateService.insertMember(user_id,associate.getId());
+			associateService.updateAssociateCount(associate_name);
 		}else {
 			associateService.updateApplyWithN(apply_id);
 		}
@@ -181,10 +189,11 @@ public class AssociateController {
 		return mv;
 	}
 	@RequestMapping("join_activity.do")
-	public ModelAndView joinActivity(long activity_id,long user_id){
+	public ModelAndView joinActivity(long activity_id,long user_id,long associate_id){
 		ModelAndView mv = new ModelAndView();
 		associateService.insertJoins(UUID.getId(),activity_id,user_id);
 		associateService.updateActivityJoinsNumber(activity_id);
+		associateService.updateUserActivity(user_id,associate_id);
 		List<ActivityView> activity = associateService.findActivityByUserId(user_id);
 		List<ActivityView> activitied = associateService.findActivityInJoins(user_id);
 		Set<Long> set = activitied.stream().map(s->s.getActivity_id()).collect(Collectors.toSet());
@@ -210,6 +219,35 @@ public class AssociateController {
 		associateService.insertActivity(id,associate_id,time_stamp,activity_name,activity_content);
 		return mv;
 	}
+	@RequestMapping("member_list.do")
+	public ModelAndView getMemberList(long associate_id){
+		ModelAndView mv = new ModelAndView();
+		List<MemberMessage> list = associateService.findAllMemberByAssociateId(associate_id);
+		System.out.println(list);
+		mv.addObject("list",list);
+		mv.setViewName("member_list");
+		return mv;
+	}
+	@RequestMapping("deleteMember.do")
+	public ModelAndView deleteMember(long member_id,long associate_id){
+		ModelAndView mv = new ModelAndView();
+		associateService.deleteMember(member_id);
+		List<MemberMessage> list = associateService.findAllMemberByAssociateId(associate_id);
+		mv.addObject("list",list);
+		mv.setViewName("member_list");
+		return mv;
+	}
+	@RequestMapping("updateGraduateStudent.do")
+	public ModelAndView updateGraduate(long associate_id){
+		ModelAndView mv = new ModelAndView();
+		List<MemberMessage> list = associateService.findNotBeDeleteMember(associate_id);
+		List<Long> str1 = list.stream().filter(m->Integer.parseInt("20"+m.getUser_number().substring(3,5))<=GetNowTime.getSysYearBeforeFour()).map(p->p.getMember_id()).collect(Collectors.toList());
+		System.out.println(str1);
 
+		List<MemberMessage> list1 = associateService.findAllMemberByAssociateId(associate_id);
+		mv.addObject("list",list1);
+		mv.setViewName("member_list");
+		return mv;
+	}
 
 }

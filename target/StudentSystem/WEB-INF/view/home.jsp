@@ -43,6 +43,11 @@
     <!--[if lt IE 9]>
 
     <![endif]-->
+    <script type="text/javascript">
+        function submitByA() {
+            document.getElementById("input_form").submit();
+        }
+    </script>
 </head>
 
 <body>
@@ -59,10 +64,12 @@
                         <div class="inner-wrapper">
                             <h2 class="clr1">搜索文章</h2>
                         </div>
+                <form action="/article/search.do" method="post" id="input_form">
                         <div class="form-group">
-                            <input type="text" class="form-control " placeholder="Search by Name">
-                            <a href="#" class="sarch-member-btn"><i class="flaticon-search"></i></a>
+                            <input type="text" class="form-control " name="target" placeholder="Search by Name">
+                            <a  class="sarch-member-btn" onclick="submitByA()"><i class="flaticon-search"></i></a>
                         </div>
+                </form>
                     </div>
         </div>
     </div>

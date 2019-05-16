@@ -11,7 +11,7 @@
         insert into associate(id,username,email_address,password,create_time,recommend_word,img_url,recommend,user_id) values(#{arg0},#{arg1},#{arg2},#{arg3},#{arg4},#{arg5},#{arg6},#{arg7},#{arg8})
     </insert>
     <select id="findUnsubscribed" resultType="com.studentSystem.model.AssociateView">
-        select a.id as associate_id,a.username as associate_name,a.recommend,a.recommend_word,u.username,a.email_address as email from associate as a,user as u where a.user_id=u.id and state =0
+        select a.id as associate_id,a.username as associate_name,a.recommend,a.recommend_word,u.username,a.email_address,a.person_count,a.max_person as email from associate as a,user as u where a.user_id=u.id and state =0
     </select>
     <update id="updateState">
         update associate set state = 1 where id = #{id}
@@ -20,7 +20,7 @@
         delete from associate where id = #{id}
     </delete>
     <select id="findSubscribed" resultType="com.studentSystem.model.AssociateView">
-      select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url from associate as a where state =1
+      select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url,a.person_count,a.max_person from associate as a where state =1
     </select>
 
     <insert id="insertApplicant" parameterType="com.studentSystem.model.Applicant">
@@ -63,13 +63,13 @@
         select u.username,u.email,associate.username as associate_name from member,user as u,associate where member.user_id=u.id and member.associate_id=associate.id and member.id=#{id}
     </select>
     <select id="findActivityByUserId" resultType="com.studentSystem.model.ActivityView">
-        select a.id as activity_id,associate.username as associate_name,a.activity_time,a.activity_name,a.activity_content from activity as a,member as m,associate where m.user_id = #{user_id} and m.state=1 and m.associate_id=a.associate_id and m.associate_id=associate.id
+        select a.id as activity_id,associate.id as associate_id,associate.username as associate_name,a.activity_time,a.activity_name,a.activity_content from activity as a,member as m,associate where m.user_id = #{user_id} and m.state=1 and m.associate_id=a.associate_id and m.associate_id=associate.id
     </select>
     <select id="findAllJoins" resultType="long">
         select activity_id from joins where user_id = #{id}
     </select>
     <select id="findActivityInJoins" resultType="com.studentSystem.model.ActivityView">
-        select activity.id as activity_id,associate.username as associate_name,activity.activity_time,activity.activity_name,activity.activity_content from joins,activity,associate WHERE joins.user_id = #{id} and joins.activity_id=activity.id and activity.associate_id = associate.id
+        select activity.id as activity_id,associate.id as associate_id,associate.username as associate_name,activity.activity_time,activity.activity_name,activity.activity_content from joins,activity,associate WHERE joins.user_id = #{id} and joins.activity_id=activity.id and activity.associate_id = associate.id
     </select>
     <select id="insertJoins">
         insert into joins(id,user_id,activity_id) values (#{arg0},#{arg2},#{arg1})
@@ -81,9 +81,66 @@
         update activity set counts = counts+1 where id = #{id}
     </update>
     <select id="findSubscribedByPage" resultType="com.studentSystem.model.AssociateView">
-        select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url from associate as a where state =1 limit #{arg0},#{arg1}
+        select a.id as associate_id,a.username as associate_name,a.recommend_word,a.email_address as email,a.img_url,a.person_count,a.max_person from associate as a where state =1 limit #{arg0},#{arg1}
     </select>
     <select id="findTotalCounts" resultType="int">
         select count(associate.id) from associate where state=1
     </select>
+    <update id="updateAssociateCount">
+        update associate set person_count = person_count+1 where associate.username = #{name}
+    </update>
+    <select id="findStatusByUser" resultType="int">
+        select status from user where user.id=#{id}
+    </select>
+    <update id="updateStatus">
+        update user set status = status+1 where user.id = #{user_id}
+    </update>
+    <select id="findMemberByAssociateId" resultType="com.studentSystem.model.MemberMessage">
+        select m.id as member_id,u.student_number as user_number,u.username,m.active_number,m.state from member as m,user as u where m.user_id=u.id  and m.associate_id = #{id} and state!=2
+    </select>
+    <update id="deleteMember">
+        update member set state = -1 where id = #{id}
+    </update>
+    <select id="findNotBeDeleteMember" resultType="com.studentSystem.model.MemberMessage">
+        select m.id as member_id,u.student_number as user_number,u.username,m.active_number,m.state from member as m,user as u where m.user_id=u.id  and m.associate_id = #{id} and state != 2 and state!=-1
+    </select>
+    <update id="updateGraduateMember"  parameterType="java.util.Map">
+      <!--UPDATE member SET-->
+      <!--state = CASE id-->
+
+        <!--<foreach collection="list" item="id" separator=",">-->
+            <!--WHEN #{id} THEN 2-->
+        <!--</foreach>-->
+    <!--END-->
+<!--WHERE id IN <foreach item="id" collection="list" separator="," open="(" close=")" index="">  #{id}-->
+    <!--</foreach>-->
+
+        <!--<foreach collection="list" separator=";" item="cus">-->
+            <!--update member set state = 2 where id = #{cus}-->
+        <!--</foreach>-->
+
+
+        update member
+        <trim prefix="set" suffixOverrides=",">
+            <!-- 拼接case when 这是一种写法 -->
+            <!--<foreach collection="list" separator="" item="cus" open="c_age = case id" close="end, ">-->
+            <!--when #{cus.id} then #{cus.age}-->
+            <!--</foreach>-->
+
+            <!-- 拼接case when 这是另一种写法，这种写着更专业的感觉 -->
+            <trim prefix="state =case" suffix="end,">
+                <foreach collection="list" item="cus">
+                  when id=#{cus} then 2
+                </foreach>
+            </trim>
+        </trim>
+        <where>
+            <foreach collection="list" separator="or" item="cus">
+                id = #{cus}
+            </foreach>
+        </where>
+    </update>
+    <update id="updateUserActivity">
+        update member set member.active_number = member.active_number+1 where member.user_id=#{arg0} and member.associate_id=#{arg1}
+    </update>
 </mapper>

@@ -42,4 +42,15 @@ public class ArticleServiceImpl implements ArticleService {
 		return articlePage;
 
 	}
+
+	@Override
+	public ArticlePage searchByTarget(String target,int p) {
+		ArticlePage articlePage = new ArticlePage();
+		ArrayList<Article> list =  articleDao.search((p-1)*articlePage.getPageSize(),articlePage.getPageSize(),target);
+		int totalCount = articleDao.searchCount(target);
+		articlePage.setList(list);
+		articlePage.setCurPage(p);
+		articlePage.setTotalCount(totalCount);
+		return articlePage;
+	}
 }

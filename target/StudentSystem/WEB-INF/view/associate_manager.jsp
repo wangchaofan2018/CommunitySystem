@@ -56,7 +56,7 @@
                                         <td tabindex="1">${dateValue1}</td>
                                         <td tabindex="1">${item.user_introduce}</td>
                                         <td tabindex="1">${item.user_reason}</td>
-                                        <td tabindex="1"><a href="/associate/apply_is_agree.do?flag=true&apply_id=${item.apply_id}">同意  </a><a href="/associate/apply_is_agree.do?flag=false&apply_id=${item.apply_id}">拒绝</a> </td>
+                                        <td tabindex="1"><a href="/associate/apply_is_agree.do?flag=true&apply_id=${item.apply_id}&associate_name=${item.username}">同意  </a><a href="/associate/apply_is_agree.do?flag=false&apply_id=${item.apply_id}&associate_name=${item.username}">拒绝</a> </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>

@@ -7,52 +7,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c19791de-f4c3-4b65-9e25-92b8299e2771" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateViewPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/article/jiewu1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/article/moshu1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/article/moshu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/MemberMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/article/timg12.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ActivityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_associate_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_associate_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/alipay_success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/alipay_success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/AssociateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/AssociateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/dao/AssociateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/dao/AssociateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/ArticlePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/ArticlePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/Associate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/Associate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/AssociateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/model/AssociateView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/AssociateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/AssociateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/impl/ArticleServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/impl/AssociateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/service/impl/AssociateServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/utils/GetNowTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/com/studentSystem/utils/GetNowTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/mapper/AssociateDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/classes/mapper/AssociateDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/active_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/active_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/admin_associate_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/admin_associate_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/alipay_success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/alipay_success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_introduce.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_introduce.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/foot_base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/foot_base.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/associate_manager.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/recommend.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/recommend.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/top_base.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/WEB-INF/view/top_base.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentSystem/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentSystem/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/AssociateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/AssociateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/dao/AssociateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/dao/AssociateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/model/ArticlePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/model/ArticlePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/model/Associate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/model/Associate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/model/AssociateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/model/AssociateView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/service/AssociateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/service/AssociateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/service/impl/ArticleServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/service/impl/AssociateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/service/impl/AssociateServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/studentSystem/utils/GetNowTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/studentSystem/utils/GetNowTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/AssociateDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AssociateDao.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -81,7 +94,7 @@
     <session id="2068325448">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="67" />
+          <entry key="project.closed" value="74" />
           <entry key="project.open.time.132" value="1" />
           <entry key="project.open.time.200" value="1" />
           <entry key="project.open.time.21" value="1" />
@@ -93,15 +106,15 @@
           <entry key="project.open.time.34" value="3" />
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.36" value="3" />
-          <entry key="project.open.time.37" value="6" />
-          <entry key="project.open.time.38" value="4" />
-          <entry key="project.open.time.39" value="5" />
+          <entry key="project.open.time.37" value="7" />
+          <entry key="project.open.time.38" value="6" />
+          <entry key="project.open.time.39" value="6" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.40" value="7" />
-          <entry key="project.open.time.41" value="9" />
-          <entry key="project.open.time.42" value="3" />
+          <entry key="project.open.time.40" value="8" />
+          <entry key="project.open.time.41" value="11" />
+          <entry key="project.open.time.42" value="4" />
           <entry key="project.open.time.43" value="2" />
-          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.48" value="1" />
@@ -110,7 +123,7 @@
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="74" />
+          <entry key="project.opened" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -118,15 +131,15 @@
           <entry key="class" value="8" />
           <entry key="css" value="25" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="275" />
+          <entry key="java" value="317" />
           <entry key="jpeg" value="10" />
           <entry key="jpg" value="6" />
           <entry key="js" value="13" />
-          <entry key="jsp" value="104" />
+          <entry key="jsp" value="131" />
           <entry key="properties" value="24" />
           <entry key="svg" value="2" />
           <entry key="tld" value="2" />
-          <entry key="xml" value="104" />
+          <entry key="xml" value="109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -134,37 +147,37 @@
           <entry key="CLASS" value="8" />
           <entry key="CSS" value="25" />
           <entry key="Image" value="16" />
-          <entry key="JAVA" value="275" />
-          <entry key="JSP" value="104" />
+          <entry key="JAVA" value="317" />
+          <entry key="JSP" value="131" />
           <entry key="JavaScript" value="13" />
           <entry key="Properties" value="24" />
           <entry key="SVG" value="2" />
-          <entry key="XML" value="107" />
+          <entry key="XML" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="25" />
           <entry key="dummy" value="27" />
-          <entry key="java" value="21562" />
+          <entry key="java" value="23483" />
           <entry key="js" value="102" />
-          <entry key="jsp" value="8301" />
+          <entry key="jsp" value="9500" />
           <entry key="properties" value="263" />
           <entry key="txt" value="11" />
-          <entry key="xml" value="5088" />
+          <entry key="xml" value="5910" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="25" />
           <entry key="HTML" value="3" />
-          <entry key="JAVA" value="21562" />
-          <entry key="JSP" value="8298" />
+          <entry key="JAVA" value="23483" />
+          <entry key="JSP" value="9497" />
           <entry key="JavaScript" value="102" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="Properties" value="263" />
-          <entry key="SQL" value="12" />
-          <entry key="XML" value="5076" />
+          <entry key="SQL" value="31" />
+          <entry key="XML" value="5879" />
         </counts>
       </usages-collector>
     </session>
@@ -172,87 +185,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="209">
+              <caret line="195" column="64" selection-start-line="195" selection-start-column="52" selection-end-line="195" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AlipayController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2346">
-              <caret line="102" column="195" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="195" />
+            <state relative-caret-position="152">
+              <caret line="156" column="67" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="67" />
+              <folding>
+                <element signature="e#6405#6406#0" expanded="true" />
+                <element signature="e#6440#6441#0" expanded="true" />
+                <element signature="e#6652#6653#0" expanded="true" />
+                <element signature="e#6678#6679#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-759">
-              <caret line="6" column="72" lean-forward="true" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+            <state relative-caret-position="278">
+              <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2323">
-              <caret line="101" column="174" selection-start-line="101" selection-start-column="174" selection-end-line="101" selection-end-column="174" />
+            <state relative-caret-position="206">
+              <caret line="85" column="283" selection-start-line="85" selection-start-column="283" selection-end-line="85" selection-end-column="283" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_associate_list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_login.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="51" column="60" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+            <state relative-caret-position="4416">
+              <caret line="207" column="41" lean-forward="true" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -267,18 +254,13 @@
         <option value="spring-beans.schema" />
         <option value="Tag Library Descriptor" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chatRobo</find>
-      <find>spring-test</find>
-      <find>logging</find>
-      <find>time</find>
-      <find>io</find>
       <find>job-listing-container</find>
       <find>spring-</find>
       <find>int</find>
@@ -287,10 +269,28 @@
       <find>Custom content</find>
       <find>.do</find>
       <find>checkAs</find>
-      <find>findActivityByUserId</find>
       <find>form</find>
       <find>findActivityInJoins</find>
       <find>recommend</find>
+      <find>associate_m</find>
+      <find>introd</find>
+      <find>apply</find>
+      <find>apply_form</find>
+      <find>associate_id</find>
+      <find>button</find>
+      <find>**</find>
+      <find>******</find>
+      <find>8888</find>
+      <find>findUnsubscribed</find>
+      <find>AssociateView</find>
+      <find>findUnsubscribedAssociate</find>
+      <find>article_create_page</find>
+      <find>8888888</find>
+      <find>aop</find>
+      <find>888</find>
+      <find>memberV</find>
+      <find>join_activity</find>
+      <find>findActivityByUserId</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -309,24 +309,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/AlipayDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_bill.jsp" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/AlipayConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AlipayService.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AlipayServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AlipayDao.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/MemberView.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/alipay_success.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/listener/QueueMessageListener.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/listener/EmailSender.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/EmailMessage.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AlipayController.java" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/listener/ProducerService.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ActivityView.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/activity_create.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/TimeToStamp.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/inform.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/UserService.java" />
@@ -336,30 +327,39 @@
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/Intercepter/LoginIntercepter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateViewPage.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_associate_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_login.jsp" />
         <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/alipay_success.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_manager.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateView.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/MemberMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml" />
       </list>
     </option>
   </component>
@@ -435,7 +435,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -477,6 +477,15 @@
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="studentSystem" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudentSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudentSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="studentSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudentSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -607,13 +616,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557158640206" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558010736424" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -621,18 +630,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\article" />
-      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\background_pic" />
-      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\person" />
-      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\article" />
       <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img" />
       <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp" />
       <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\css" />
       <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\article" />
+      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\background_pic" />
+      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img\person" />
+      <recent name="C:\Users\NOTEBOOK\IdeaProjects\StudentSystem\src\main\webapp\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -951,6 +960,15 @@
       <workItem from="1557120381182" duration="902000" />
       <workItem from="1557133035478" duration="4231000" />
       <workItem from="1557147807809" duration="5652000" />
+      <workItem from="1557192909284" duration="9811000" />
+      <workItem from="1557369579003" duration="387000" />
+      <workItem from="1557383240604" duration="1479000" />
+      <workItem from="1557625660678" duration="3291000" />
+      <workItem from="1557649103363" duration="5033000" />
+      <workItem from="1557714175367" duration="7190000" />
+      <workItem from="1557798986702" duration="1862000" />
+      <workItem from="1557834125679" duration="629000" />
+      <workItem from="1557976285958" duration="23384000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交">
       <created>1553657648768</created>
@@ -995,7 +1013,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="460092000" />
+    <option name="totallyTimeSpent" value="513158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1010,7 +1028,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49874055" visible="true" weight="0.29622132" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874055" visible="true" weight="0.2071525" />
       <window_info id="Structure" order="1" sideWeight="0.50125945" side_tool="true" weight="0.23414305" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1020,7 +1038,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49662617" weight="0.2635432" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49662617" visible="true" weight="0.29282576" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39824304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1099,163 +1117,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/activemq.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/OrderStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/LeeJSONResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/AlipayConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/activity_create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="175" selection-start-line="53" selection-start-column="175" selection-end-line="53" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/UUID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-cfg.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="144" selection-start-line="11" selection-start-column="144" selection-end-line="11" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="119" selection-start-line="19" selection-start-column="119" selection-end-line="19" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/inform.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="65" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="137" selection-start-line="13" selection-start-column="137" selection-end-line="13" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/TimeToStamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/Intercepter/LoginIntercepter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="150" selection-start-line="16" selection-start-column="150" selection-end-line="16" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1267,59 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="2254" column="22" lean-forward="true" selection-start-line="2254" selection-start-column="22" selection-end-line="2254" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="47" column="55" lean-forward="true" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateViewPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="51" column="93" selection-start-line="51" selection-start-column="87" selection-end-line="51" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="128" column="71" lean-forward="true" selection-start-line="128" selection-start-column="71" selection-end-line="128" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,80 +1143,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/img/article/8762431895.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="58" column="45" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2576">
-          <caret line="168" column="47" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="65" column="254" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2829">
-          <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="29" column="15" selection-start-line="27" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AlipayController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="102" column="195" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2323">
-          <caret line="101" column="174" selection-start-line="101" selection-start-column="174" selection-end-line="101" selection-end-column="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1422,6 +1160,63 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin_login.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/alipay_success.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/is_actived.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/foot_base.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/manager_center.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1159" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Associate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="58" column="277" selection-start-line="58" selection-start-column="277" selection-end-line="58" selection-end-column="277" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -1429,10 +1224,256 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_create.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/inform.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="6" column="72" lean-forward="true" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+        <state relative-caret-position="1380">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/associate_introduce.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1587">
+          <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ArticlePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateViewPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/ArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/AssociateView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/MemberView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_bill.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/recommend.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="99" column="139" selection-start-line="99" selection-start-column="139" selection-end-line="99" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/article_create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-690" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top_base.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="57" column="133" selection-start-line="57" selection-start-column="133" selection-end-line="57" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/MemberMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/TimeToStamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/my_apply.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="67" column="40" lean-forward="true" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4416">
+          <caret line="207" column="41" lean-forward="true" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/model/ActivityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding>
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/dao/AssociateDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="77" column="27" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/AssociateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/utils/GetNowTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/active_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="85" column="283" selection-start-line="85" selection-start-column="283" selection-end-line="85" selection-end-column="283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/controller/AssociateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="195" column="64" selection-start-line="195" selection-start-column="52" selection-end-line="195" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/studentSystem/service/impl/AssociateServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="156" column="67" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="67" />
+          <folding>
+            <element signature="e#6405#6406#0" expanded="true" />
+            <element signature="e#6440#6441#0" expanded="true" />
+            <element signature="e#6652#6653#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AssociateDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
         </state>
       </provider>
     </entry>

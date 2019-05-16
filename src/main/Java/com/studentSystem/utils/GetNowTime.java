@@ -2,6 +2,7 @@ package com.studentSystem.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class GetNowTime {
@@ -34,4 +35,15 @@ public class GetNowTime {
 		}
 		return unixTimestamp;
 	}
+	public static int getSysYearBeforeFour() {
+
+		Calendar date = Calendar.getInstance();
+
+		String year = String.valueOf(date.get(Calendar.YEAR));
+		int y = Integer.parseInt(year);
+		y= y-4;
+		return y;
+	}
+
+
 }

@@ -1,6 +1,7 @@
 package com.studentSystem.controller;
 
 import com.studentSystem.model.Article;
+import com.studentSystem.model.ArticlePage;
 import com.studentSystem.model.Comment;
 import com.studentSystem.service.ArticleService;
 import com.studentSystem.service.CommentService;
@@ -8,6 +9,7 @@ import com.studentSystem.utils.GetNowTime;
 import com.studentSystem.utils.StringUtil;
 import com.studentSystem.utils.UUID;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -91,5 +93,12 @@ public class ArticleController {
 		mv.addObject("list",list);
 		mv.setViewName("home");
 		return mv;
+	}
+	@RequestMapping("search.do")
+	public String returnHome(Model model,String target){
+		int p =1;
+		ArticlePage articlePage = articleService.searchByTarget(target,p);
+		model.addAttribute("articlePage",articlePage);
+		return "home";
 	}
 }

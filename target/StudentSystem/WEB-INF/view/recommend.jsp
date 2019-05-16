@@ -29,8 +29,19 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/responsive.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/font-awesome.css">
     <script type="text/javascript">
+        window.onload=function () {
+            if(${user.status>=3}){
+                for(var i=0;i<document.getElementsByClassName("button").length;i++){
+                    document.getElementsByClassName("button")[i].href="#"
+                }
+            }
+        }
         function change(obj) {
-            document.getElementById("associate_id").value=obj;
+            if(${user.status<3}) {
+                document.getElementById("associate_id").value = obj;
+            }else {
+                alert("您申请的社团已超过3个，无法申请！")
+            }
         }
     </script>
 </head>
@@ -85,7 +96,8 @@
                                         </div>
                                         <div class="more">
                                             <div class="buttons">
-                                                <a data-toggle="modal" href="#apply_form" class="button" onclick="change(${item.associate_id})">现在申请</a>
+                                                <c:if test="${item.person_count<=item.max_person}"><a data-toggle="modal" id="apply" href="#apply_form" class="button" onclick="change(${item.associate_id})">现在申请</a></c:if>
+                                                <c:if test="${item.person_count>item.max_person}"><a data-toggle="modal" id="apply" href="#" class="button" style="color: #3a3a3a">人数已满</a></c:if>
                                                 <a href="#" class="favourite"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></a>
                                             </div>
 

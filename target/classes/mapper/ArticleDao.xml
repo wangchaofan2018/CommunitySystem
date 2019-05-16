@@ -19,4 +19,10 @@
     <select id="findTotalCounts" resultType="int">
         select count(title_id) from article
     </select>
+    <select id="search" resultType="com.studentSystem.model.Article">
+        SELECT * FROM article WHERE CONCAT(IFNULL(`username`,''),IFNULL(`article_name`,''),IFNULL(`article_content`,'')) LIKE "%"#{arg2}"%" limit #{arg0},#{arg1}
+    </select>
+    <select id="searchCount" resultType="int">
+        select count(title_id) from article where CONCAT(IFNULL(`username`,''),IFNULL(`article_name`,''),IFNULL(`article_content`,'')) LIKE "%"#{arg0}"%"
+    </select>
 </mapper>

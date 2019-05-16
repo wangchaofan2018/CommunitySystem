@@ -195,4 +195,44 @@ public class AssociateServiceImpl implements AssociateService {
 		return associateViewPage;
 	}
 
+	@Override
+	public void updateAssociateCount(String name) {
+		associateDao.updateAssociateCount(name);
+	}
+
+	@Override
+	public int findStatusByUser(long user_id) {
+		return associateDao.findStatusByUser(user_id);
+	}
+
+	@Override
+	public void updateUserStatus(long user_id) {
+		associateDao.updateStatus(user_id);
+	}
+
+	@Override
+	public List<MemberMessage> findAllMemberByAssociateId(long associate_id) {
+		return associateDao.findMemberByAssociateId(associate_id);
+	}
+
+	@Override
+	public void deleteMember(long member_id) {
+		associateDao.deleteMember(member_id);
+	}
+
+	@Override
+	public List<MemberMessage> findNotBeDeleteMember(long associate_id) {
+		return associateDao.findNotBeDeleteMember(associate_id);
+	}
+
+	@Override
+	public void graduateMember(List<Long> str1) {
+		associateDao.updateGraduateMember(str1);
+	}
+
+	@Override
+	public void updateUserActivity(long user_id,long associate_id) {
+		associateDao.updateUserActivity(user_id,associate_id);
+	}
+
 }
